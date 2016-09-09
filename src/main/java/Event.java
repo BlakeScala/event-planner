@@ -1,32 +1,38 @@
+import java.util.Arrays;
+
 public class Event {
   private Integer mNumberOfPeople;
-  private String mFoodServed;
-  private String mBeveragesServed;
-  private boolean mHireBand;
+  private String mFoodChoice;
+  private String mBeverageChoice;
+  private String mEntertainmentChoice;
+  private String[] mChoiceArray = {"1", "2", "3", "4", "5"};
+  private Integer[] mFoodCostArray = {0, 50, 80, 120, 200};
+  private Integer[] mBeverageCostArray = {0, 30, 50, 100, 200};
+  private Integer[] mEntertainmentCostArray = {0, 50, 100, 150, 250};
+  // public Integer mfoodCost;
 
-  public Event(Integer numberOfPeople, String foodServed, String beveragesServed, boolean hireBand) {
+  public Event(Integer numberOfPeople, String foodChoice, String beverageChoice, String entertainmentChoice) {
     mNumberOfPeople = numberOfPeople;
-    mFoodServed = foodServed;
-    mBeveragesServed = beveragesServed;
-    mHireBand = hireBand;
+    mFoodChoice = foodChoice;
+    mBeverageChoice = beverageChoice;
+    mEntertainmentChoice = entertainmentChoice;
+    // mfoodCost = 0;
   }
-  // public String[][] foodsArray = {cheapFoodArray, mediumFoodArray, expensiveFoodArray};
-  public String[] cheapFoodArray = {"chips", "pretzels", "salsa"};
 
   public Integer getNumberOfPeople() {
     return mNumberOfPeople;
   }
 
-  public String getFoodServed() {
-    return mFoodServed;
+  public String getfoodChoice() {
+    return mFoodChoice;
   }
 
-  public String getBeveragesServed() {
-    return mBeveragesServed;
+  public String getBeverageChoice() {
+    return mBeverageChoice;
   }
 
-  public boolean getHireBand() {
-    return mHireBand;
+  public String getEntertainmentChoice() {
+    return mEntertainmentChoice;
   }
 
   public Integer numberOfPeopleCost() {
@@ -34,12 +40,12 @@ public class Event {
     return peopleCost;
   }
 
-  // public Integer foodServedCost() {
-  //   Integer foodCost;
-  //   for (int i = 0: cheapFoodArray.length) {
-  //     if (cheapFoodArray[i].contains(getFoodServed())){
-  //       foodCost += 3;
+  // public Integer foodChoiceCost() {
+  //   for (int i = 0; i < cheapFoodArray.length; i ++) {
+  //     if (cheapFoodArray[i].contains(String.valueOf(getfoodChoice()))){
+  //       mfoodCost += 3;
   //     }
   //   }
+  //   return mfoodCost;
   // }
 }
