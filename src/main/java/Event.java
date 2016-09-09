@@ -23,4 +23,8 @@ public class Event {
   public String getBeveragesServed() {
     return mBeveragesServed;
   }
+
+  public boolean getHireBand() {
+    return mHireBand;
+  }
 }

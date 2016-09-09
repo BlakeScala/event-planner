@@ -22,4 +22,10 @@ public class EventTest{
     Event newParty = new Event(5,"pizza","sprite", true);
     assertEquals("sprite", newParty.getBeveragesServed());
   }
+
+  @Test
+  public void getBeveragesServed_returnsPrivate_boolean() {
+    Event newParty = new Event(5,"pizza","sprite", true);
+    assertEquals(true, newParty.getHireBand());
+  }
 }
