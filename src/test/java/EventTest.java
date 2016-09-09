@@ -24,8 +24,16 @@ public class EventTest{
   }
 
   @Test
-  public void getBeveragesServed_returnsPrivate_boolean() {
+  public void getHireBand_returnsPrivate_boolean() {
     Event newParty = new Event(5,"pizza","sprite", true);
     assertEquals(true, newParty.getHireBand());
   }
+
+  @Test
+  public void numberOfPeopleCost_getCostForPeople_Integer() {
+    Event newParty = new Event(5,"pizza","sprite", true);
+    assertEquals((Integer)10, newParty.numberOfPeopleCost());
+  }
+
+
 }
