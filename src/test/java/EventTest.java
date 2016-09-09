@@ -35,11 +35,16 @@ public class EventTest{
     Event newParty = new Event(5,"3","2", "4");
     assertEquals((Integer)20, newParty.numberOfPeopleCost());
   }
-  //
-  // @Test
-  // public void foodChoiceCost_getCostForOneFood_Integer() {
-  //   Event newParty = new Event(5,"chips","2", "4");
-  //   assertEquals((Integer)3, newParty.foodChoiceCost());
-  // }
 
+  @Test
+  public void foodCost_getCostForFood_Integer() {
+    Event newParty = new Event(5,"4","2", "4");
+    assertEquals((Integer)120, newParty.foodCost());
+  }
+
+  @Test
+  public void beverageCost_getCostForBeverage_Integer() {
+    Event newParty = new Event(5,"4","2", "4");
+    assertEquals((Integer)30, newParty.beverageCost());
+  }
 }
