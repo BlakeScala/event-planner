@@ -46,11 +46,12 @@ public class App {
 
     System.out.println("Alright, here's your reservation:");
     System.out.println("_________________________________");
+    System.out.println("Date: " + dateInput);
     System.out.println("Number of people attending: " + peopleComing);
     System.out.println("Food: " + event.getOutputFood());
-    System.out.println("Beverages: " + event.getOutputBeverage();  );
-    System.out.println("Entertainment: " );
+    System.out.println("Beverages: " + event.getOutputBeverage());
+    System.out.println("Entertainment: " + event.getOutputEntertainment());
     System.out.println("_________________________________");
-    System.out.println("Total Cost: " + event.getTotalCost());
+    System.out.println("Total Cost: $" + event.getTotalCost());
   }
 }

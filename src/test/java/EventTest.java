@@ -48,4 +48,10 @@ public class EventTest{
     newParty.calculateTotalCost();
     assertEquals("Punch bowl", newParty.getOutputBeverage());
   }
+  @Test
+  public void getOutputEntertainment_getOutputMessage_String() {
+    Event newParty = new Event(5,"4","2", "4");
+    newParty.calculateTotalCost();
+    assertEquals("Acoustic guitarist", newParty.getOutputEntertainment());
+  }
 }
