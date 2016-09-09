@@ -15,4 +15,8 @@ public class Event {
   public Integer getNumberOfPeople(){
     return mNumberOfPeople;
   }
+
+  public String getFoodServed(){
+    return mFoodServed;
+  }
 }

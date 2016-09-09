@@ -10,4 +10,10 @@ public class EventTest{
     Event newParty = new Event(5,"pizza","sprite", true);
     assertEquals((Integer)5, newParty.getNumberOfPeople());
   }
+
+  @Test
+  public void getFoodServed_returnsPrivate_String() {
+    Event newParty = new Event(5,"pizza","sprite", true);
+    assertEquals("pizza", newParty.getFoodServed());
+  }
 }
