@@ -36,7 +36,7 @@ public class Event {
   }
 
   public Integer numberOfPeopleCost() {
-    Integer peopleCost = getNumberOfPeople() * 2;
+    Integer peopleCost = getNumberOfPeople() * 4;
     return peopleCost;
   }
 
