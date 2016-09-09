@@ -42,13 +42,15 @@ public class App {
 
     Event event = new Event(peopleComing, foodInput, beverageInput, entertainmentInput);
 
+    event.calculateTotalCost();
+
     System.out.println("Alright, here's your reservation:");
     System.out.println("_________________________________");
     System.out.println("Number of people attending: " + peopleComing);
-    System.out.println("Food: " + outputFood );
-    System.out.println("Beverages: "  );
+    System.out.println("Food: " + event.getOutputFood());
+    System.out.println("Beverages: " + event.getOutputBeverage();  );
     System.out.println("Entertainment: " );
     System.out.println("_________________________________");
-    System.out.println("Total Cost: ");
+    System.out.println("Total Cost: " + event.getTotalCost());
   }
 }

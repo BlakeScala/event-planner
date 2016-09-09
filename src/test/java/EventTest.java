@@ -35,4 +35,17 @@ public class EventTest{
     Event newParty = new Event(5,"4","2", "4");
     assertEquals((Integer)325, newParty.calculateTotalCost());
   }
+
+  @Test
+  public void getOutputFood_getOutputMessage_String() {
+    Event newParty = new Event(5,"4","2", "4");
+    newParty.calculateTotalCost();
+    assertEquals("Deluxe buffet", newParty.getOutputFood());
+  }
+  @Test
+  public void getOutputBeverage_getOutputMessage_String() {
+    Event newParty = new Event(5,"4","2", "4");
+    newParty.calculateTotalCost();
+    assertEquals("Punch bowl", newParty.getOutputBeverage());
+  }
 }

@@ -13,7 +13,8 @@ public class Event {
   private Integer[] mEntertainmentCostArray = {0, 50, 100, 150, 250};
   private String[] mEntertainmentInput = {"None", "Equipment", "House DJ", "Acousic Guitarist", "Band"};
   private Integer mTotalCost = 0;
-  public String outputFood;
+  private String mOutputFood;
+  private String mOutputBeverage;
 
   public Event(Integer numberOfPeople, String foodChoice, String beverageChoice, String entertainmentChoice) {
     mNumberOfPeople = numberOfPeople;
@@ -42,15 +43,25 @@ public class Event {
     return mTotalCost;
   }
 
+  public String getOutputFood() {
+    return mOutputFood;
+  }
+
+  public String getOutputBeverage() {
+    return mOutputBeverage;
+  }
+
   public Integer calculateTotalCost(){
     for(int i = 0; i<mChoiceArray.length; i++) {
       if (mFoodChoice.equals(mChoiceArray[i])){
         mTotalCost += mFoodCostArray[i];
+        mOutputFood = mFoodChoicesArray[i];
       }
     }
     for (int i = 0; i<mChoiceArray.length; i++){
       if (mBeverageChoice.equals(mChoiceArray[i])){
         mTotalCost += mBeverageCostArray[i];
+        mOutputBeverage = mBeverageChoicesArray[i];
       }
     }
     for (int i = 0; i<mChoiceArray.length; i++){
@@ -62,11 +73,11 @@ public class Event {
     return mTotalCost;
   }
 
-  public String outputMessageFood() {
-    for (int i = 0; i<mChoiceArray.length; i++){
-      if (mFoodChoice.equals(mChoiceArray[i])){
-        outputFood = mFoodChoicesArray[i];
-      }
-    }return outputFood;
-  }
+  // public String outputMessageFood() {
+  //   for (int i = 0; i<mChoiceArray.length; i++){
+  //     if (mFoodChoice.equals(mChoiceArray[i])){
+  //       outputFood = mFoodChoicesArray[i];
+  //     }
+  //   }return outputFood;
+  // }
 }
