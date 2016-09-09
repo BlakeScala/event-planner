@@ -13,7 +13,7 @@ public class EventTest{
   }
 
   @Test
-  public void getfoodChoice_returnsPrivate_Array() {
+  public void getfoodChoice_returnsPrivate_String() {
     Event newParty = new Event(5,"1","2", "4");
     assertEquals("1", newParty.getfoodChoice());
   }
@@ -25,26 +25,14 @@ public class EventTest{
   }
 
   @Test
-  public void getEntertainmentChoice_returnsPrivate_boolean() {
+  public void getEntertainmentChoice_returnsPrivate_String() {
     Event newParty = new Event(5,"3","2", "4");
     assertEquals("4", newParty.getEntertainmentChoice());
   }
 
   @Test
-  public void numberOfPeopleCost_getCostForPeople_Integer() {
-    Event newParty = new Event(5,"3","2", "4");
-    assertEquals((Integer)20, newParty.numberOfPeopleCost());
-  }
-
-  @Test
-  public void foodCost_getCostForFood_Integer() {
+  public void calculateTotalCost_getCostForTotal_Integer() {
     Event newParty = new Event(5,"4","2", "4");
-    assertEquals((Integer)120, newParty.foodCost());
-  }
-
-  @Test
-  public void beverageCost_getCostForBeverage_Integer() {
-    Event newParty = new Event(5,"4","2", "4");
-    assertEquals((Integer)30, newParty.beverageCost());
+    assertEquals((Integer)325, newParty.calculateTotalCost());
   }
 }
