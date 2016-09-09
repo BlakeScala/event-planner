@@ -1,4 +1,4 @@
-# _Template_
+# _Event Planner_
 
 #### By __
 
