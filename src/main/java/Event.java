@@ -12,11 +12,15 @@ public class Event {
     mHireBand = hireBand;
   }
 
-  public Integer getNumberOfPeople(){
+  public Integer getNumberOfPeople() {
     return mNumberOfPeople;
   }
 
-  public String getFoodServed(){
+  public String getFoodServed() {
     return mFoodServed;
+  }
+
+  public String getBeveragesServed() {
+    return mBeveragesServed;
   }
 }
